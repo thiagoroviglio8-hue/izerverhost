@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="Nexvora Panel — Centro de control de clientes.">
+  <title>Nexvora Panel — Control Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./panel.css">
+  <script src="./panel.js" defer></script>
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="../index.html"><span class="brand-symbol">N</span><span>NEXVORA<span class="brand-dot">.</span><small>PANEL</small></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="overview"><span>▦</span> Resumen</button>
+        <button class="nav-item" data-view="servers"><span>▣</span> Mis servidores <em>01</em></button>
+        <button class="nav-item" data-view="billing"><span>◇</span> Planes y recursos</button>
+        <button class="nav-item" data-view="activity"><span>◷</span> Actividad</button>
+        <button class="nav-item" data-view="support"><span>✉</span> Soporte</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><b>¿Necesitas ayuda?</b><p>La documentación y el soporte estarán disponibles próximamente.</p><a href="../index.html#contacto">Centro de ayuda ↗</a></div>
+        <div class="profile"><div class="avatar">NX</div><div><b>Cuenta de prueba</b><small>Vista de demostración</small></div><span class="profile-menu">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Abrir navegación">☰</button>
+        <div class="breadcrumbs">NEXVORA <span>/</span> <b id="crumb">Resumen</b></div>
+        <div class="top-actions"><span class="demo-pill"><i></i> ENTORNO DEMO</span><button class="icon-button" aria-label="Notificaciones">♧<i></i></button><div class="top-avatar">NX</div></div>
+      </header>
+
+      <div class="content">
+        <section class="view active" id="view-overview">
+          <div class="page-heading"><div><div class="eyebrow">CONTROL CENTER / 001</div><h1>Tu espacio de trabajo.</h1><p>Gestiona tus servicios y consulta el estado de tu cuenta desde un solo lugar.</p></div><button class="primary-button" data-demo-action="La creación de servidores estará disponible cuando Nexvora Hosting tenga infraestructura activa.">＋ Crear servidor</button></div>
+          <div class="notice"><span class="notice-icon">i</span><div><b>Estás explorando una vista de demostración</b><p>Los servidores, consumos y datos que aparecen aquí son ilustrativos. Todavía no hay servicios activos ni acciones conectadas.</p></div><span class="notice-tag">PREVIEW</span></div>
+          <div class="stat-grid">
+            <article class="stat-card"><div class="stat-top"><span>Servidores</span><span class="stat-icon">▣</span></div><strong>01</strong><small><i class="dot amber"></i> Ejemplo de servidor</small></article>
+            <article class="stat-card"><div class="stat-top"><span>Estado de cuenta</span><span class="stat-icon">◈</span></div><strong class="status-text">En preparación</strong><small><i class="dot blue"></i> Sin servicios contratados</small></article>
+            <article class="stat-card"><div class="stat-top"><span>Almacenamiento</span><span class="stat-icon">▤</span></div><strong>— <small class="unit">GB</small></strong><small>Se mostrará al activar un plan</small></article>
+            <article class="stat-card"><div class="stat-top"><span>Próxima renovación</span><span class="stat-icon">◷</span></div><strong>—</strong><small>No hay suscripciones activas</small></article>
+          </div>
+          <div class="section-title"><div><div class="eyebrow">OVERVIEW</div><h2>Tus servidores</h2></div><button class="text-button" data-open-view="servers">Ver todos ↗</button></div>
+          <article class="server-card">
+            <div class="server-ident"><div class="server-icon">▦</div><div><b>Mi servidor Minecraft</b><small>Servidor de ejemplo · Java Edition</small></div></div>
+            <span class="server-state"><i class="dot amber"></i> No conectado</span>
+            <div class="server-meta"><span>IDENTIFICADOR <b>NX-DEMO-001</b></span><span>RECURSOS <b>Pendientes</b></span><span>UBICACIÓN <b>Por definir</b></span></div>
+            <button class="outline-button" data-demo-action="Este servidor es ilustrativo. La consola se conectará cuando exista un nodo real.">Abrir administración ↗</button>
+          </article>
+          <div class="bottom-grid">
+            <article class="panel-card"><div class="card-heading"><div><div class="eyebrow">RECURSOS</div><h3>Uso del servidor</h3></div><span class="muted-badge">SIN DATOS</span></div><div class="empty-chart"><div class="chart-lines"><i></i><i></i><i></i><i></i></div><div class="chart-empty"><span>⌁</span><b>Esperando conexión</b><small>Las métricas aparecerán cuando el servidor esté activo.</small></div></div><div class="legend"><span><i class="legend-blue"></i> CPU</span><span><i class="legend-cyan"></i> RAM</span><span>Datos no disponibles</span></div></article>
+            <article class="panel-card activity-card"><div class="card-heading"><div><div class="eyebrow">ÚLTIMOS MOVIMIENTOS</div><h3>Actividad reciente</h3></div><button class="text-button" data-open-view="activity">Ver más</button></div><div class="activity-empty"><span>◷</span><b>Aún no hay actividad</b><small>Los eventos de tu cuenta aparecerán aquí.</small></div></article>
+          </div>
+        </section>
+
+        <section class="view" id="view-servers">
+          <div class="page-heading"><div><div class="eyebrow">WORKSPACE / SERVERS</div><h1>Mis servidores.</h1><p>Consulta y administra tus instancias de juego.</p></div><button class="primary-button" data-demo-action="La creación de servidores todavía no está habilitada.">＋ Crear servidor</button></div>
+          <div class="notice"><span class="notice-icon">i</span><div><b>Catálogo de demostración</b><p>Este servidor no existe en una máquina real. No es posible iniciarlo, detenerlo ni abrir su consola.</p></div><span class="notice-tag">DEMO</span></div>
+          <article class="server-card large-server"><div class="server-ident"><div class="server-icon">▦</div><div><b>Mi servidor Minecraft</b><small>Java Edition · Configuración de ejemplo</small></div></div><span class="server-state"><i class="dot amber"></i> Pendiente</span><div class="server-meta"><span>ID <b>NX-DEMO-001</b></span><span>SOFTWARE <b>Por configurar</b></span><span>VERSIÓN <b>Por configurar</b></span></div><div class="server-actions"><button class="outline-button" data-demo-action="La consola estará disponible después de conectar el backend y un nodo de hosting.">Consola</button><button class="outline-button" data-demo-action="El administrador de archivos todavía no está conectado.">Archivos</button><button class="outline-button" data-demo-action="La configuración estará disponible en una próxima versión.">Configuración</button></div></article>
+        </section>
+
+        <section class="view" id="view-billing">
+          <div class="page-heading"><div><div class="eyebrow">ACCOUNT / RESOURCES</div><h1>Planes y recursos.</h1><p>Información de planes, límites y consumo de tus servicios.</p></div></div>
+          <div class="empty-state"><span>◇</span><h2>Los planes están en preparación.</h2><p>Publicaremos los recursos, condiciones y precios cuando la infraestructura y el servicio estén listos.</p><a href="../index.html#estado">Ver estado del proyecto ↗</a></div>
+        </section>
+
+        <section class="view" id="view-activity">
+          <div class="page-heading"><div><div class="eyebrow">ACCOUNT / LOGS</div><h1>Actividad.</h1><p>Un historial de los eventos importantes de tu cuenta.</p></div></div>
+          <div class="empty-state"><span>◷</span><h2>Tu historial está vacío.</h2><p>Cuando la cuenta tenga actividad real, podrás consultar aquí los cambios y eventos.</p></div>
+        </section>
+
+        <section class="view" id="view-support">
+          <div class="page-heading"><div><div class="eyebrow">HELP / SUPPORT</div><h1>Centro de soporte.</h1><p>Estamos preparando los canales de atención de Nexvora.</p></div></div>
+          <div class="empty-state"><span>✉</span><h2>El soporte llegará próximamente.</h2><p>Los tickets y la documentación se habilitarán junto con el lanzamiento de los servicios.</p><a href="../index.html#contacto">Contactar con Nexvora ↗</a></div>
+        </section>
+      </div>
+      <footer class="main-footer"><span>© <span id="year"></span> NEXVORA</span><span>BUILD. CONNECT. INNOVATE.</span><span>CLIENT PANEL <b>v0.1.0</b></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
