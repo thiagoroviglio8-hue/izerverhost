@@ -26,3 +26,15 @@ Esta es la primera entrega visual de la web. Los servicios se presentan como ár
 5. Probar creación, suspensión, restauración, consola, archivos, límites y aislamiento antes de abrir el servicio.
 
 Nunca guardar contraseñas, tokens ni claves privadas en este repositorio.
+
+
+## Nexvora Panel (v0.1.0)
+Ruta: `/panel/`
+
+La primera interfaz del panel de clientes incluye:
+- Navegación entre resumen, servidores, planes, actividad y soporte.
+- Tarjetas de estado y recursos ilustrativos.
+- Diseño adaptable a móviles y escritorio.
+- Avisos explícitos de que los datos y controles son de demostración.
+
+Esta versión no implementa autenticación, base de datos, pagos, consola real, gestión de archivos ni conexión a Pelican. No debe utilizarse para administrar servicios reales hasta desarrollar y probar un backend seguro.
